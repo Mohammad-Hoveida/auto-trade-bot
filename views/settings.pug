@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .card
+    h2 تنظیمات کلی (پیش‌فرض‌ها)
+    form#settingsForm
+      label
+        | سرمایه اولیه (USD)
+        input(type="number" name="INITIAL_CAPITAL_USD" value=config.INITIAL_CAPITAL_USD)
+      br
+      label
+        | حق ضرر روزانه (%) 
+        input(type="number" step="0.01" name="DAILY_LOSS_LIMIT_PCT" value=config.DAILY_LOSS_LIMIT_PCT)
+      br
+      label
+        | درصد ریسک کلی (%) 
+        input(type="number" step="0.01" name="RISK_PCT" value=config.RISK_PCT)
+      br
+      label
+        | هدف ماهیانه (%) 
+        input(type="number" step="0.1" name="MONTHLY_TARGET_PCT" value=config.MONTHLY_TARGET_PCT)
+      br
+      button.btn(type="button" onclick="saveSettings()") ذخیره تنظیمات

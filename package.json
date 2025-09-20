@@ -1,0 +1,36 @@
+{
+  "name": "tradebot-advanced",
+  "version": "0.1.0",
+  "description": "Advanced TradeBot (Node.js) - alert + auto-trade with risk manager, PWA frontend (Pug), and examples.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test/run-tests.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "ccxt": "^2.0.0",
+    "csv-parse": "^5.5.6",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2",
+    "lowdb": "^1.0.0",
+    "node-cron": "^3.0.3",
+    "promise-retry": "^2.0.1",
+    "pug": "^3.0.2",
+    "sentiment": "^5.0.2",
+    "socket.io": "^4.7.2",
+    "technicalindicators": "^3.1.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "license": "MIT"
+}

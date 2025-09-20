@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .card
+    h2 حساب
+    p.balance موجودی فعلی: #{account.balance}
+    p.muted بالانس اولیه: #{account.initial_balance}
+  .card
+    h2 کنترل‌ها
+    .row
+      button.btn(onclick="runOnce()") Run one cycle
+      button.btn(onclick="setMode('ALERT_ONLY')") حالت هشدار
+      button.btn(onclick="setMode('AUTO')") حالت خودکار
+      button.btn(onclick="setMode('AUTO_WITH_CONFIRM')") خودکار با تایید
+  .card
+    h2 اعلان‌ها
+    #alerts
+      p.muted متصل نشده به سرور

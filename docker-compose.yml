@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    environment:
+      - PORT=3000
+      - DB_TYPE=postgres
+      - PGHOST=postgres
+      - PGUSER=postgres
+      - PGPASSWORD=postgres
+      - PGDATABASE=tradebot
+      - TRADE_MODE=ALERT_ONLY
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tradebot
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

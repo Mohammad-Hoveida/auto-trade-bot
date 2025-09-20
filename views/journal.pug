@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .card
+    h2 ژورنال ترید و لاگ‌ها
+    if rows && rows.length
+      each r in rows
+        .card
+          p #{new Date(r.ts).toLocaleString()} - #{r.msg}
+          pre #{r.meta}
+    else
+      p.muted ژورنالی ثبت نشده
